@@ -11,6 +11,8 @@ typedef struct {
     mail_result_t result;
 } app_service_status_t;
 esp_err_t app_service_start(void);
+/* 非阻塞复制事件到有界队列；ESP_OK 只表示入队，不表示已送达。 */
+esp_err_t app_service_fall_request(uint32_t event_id, uint64_t event_us);
 void app_service_status(app_service_status_t *out);
 esp_err_t app_service_enable_uart(void);
 esp_err_t app_service_set_time(int64_t epoch);

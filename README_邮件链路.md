@@ -12,12 +12,12 @@ ESP32生成邮件、执行SMTP认证及TLS；4G模块只做TCP透传到腾讯现
 
 | DNESP32S3 | 连接 | 依据 |
 |---|---|---|
-| P1 第1脚 / GPIO4 / UART1 TX | DTU 的 TTL RX | 手册物理第14页图2.1.2.1；GPIO复用分配物理第11页 |
-| P1 第2脚 / GPIO5 / UART1 RX | DTU 的 TTL TX，须为3.3V电平或经转换 | 同上 |
+| P1 第7脚 / GPIO17 / UART1 TX | DTU 的 TTL RX | 手册物理第14页图2.1.2.1；GPIO复用分配物理第11页 |
+| P1 第8脚 / GPIO18 / UART1 RX | DTU 的 TTL TX，须为3.3V电平或经转换 | 同上 |
 | P1 第24脚 / GND | DTU GND | 同图 |
 | USB_UART Type-C | 电脑，负责下载与UART0调试台 | 手册物理第22页，板载CH340C |
 
-GPIO4/5与RGB LCD、摄像头的数据线复用，本原型不连接RGB屏和板载摄像头；并非“完全空闲引脚”。
+GPIO17/18与RGB LCD、摄像头的数据线复用，本原型不连接RGB屏和板载摄像头；并非“完全空闲引脚”。
 P1编号按手册图和实物丝印核对，不凭插座方向猜测。
 手册注明GPIO35/36/37“勿用”，不使用它们。
 UART1默认115200、8N1、不用RTS/CTS。UART0日志不会混入UART1的TLS数据。

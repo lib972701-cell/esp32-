@@ -4,6 +4,7 @@
 #include "app_service.h"
 #include "app_console.h"
 #include "esp_err.h"
+#include "fall_app.h"
 
 /*
  * 启动顺序必须保证 Service 已创建互斥锁和队列，控制台命令才能访问服务。
@@ -11,5 +12,6 @@
 void app_main(void)
 {
     ESP_ERROR_CHECK(app_service_start());
+    ESP_ERROR_CHECK(fall_app_start());
     ESP_ERROR_CHECK(app_console_start());
 }

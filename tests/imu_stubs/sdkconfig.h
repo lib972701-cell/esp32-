@@ -1,0 +1,1 @@
+#define CONFIG_FALL_IMU_ODR_HZ 125

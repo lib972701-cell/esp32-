@@ -1,10 +1,10 @@
 menu "Serial 4G mail prototype"
 config MAIL_DTU_TX_GPIO
-    int "DTU UART1 TX GPIO (DNESP32S3 P1 pin1)"
-    range 4 5
-    default 4
+    int "DTU UART1 TX GPIO (DNESP32S3 P1 pin7)"
+    range 17 18
+    default 17
 config MAIL_DTU_RX_GPIO
-    int "DTU UART1 RX GPIO (DNESP32S3 P1 pin2)"
-    range 4 5
-    default 5
+    int "DTU UART1 RX GPIO (DNESP32S3 P1 pin8)"
+    range 17 18
+    default 18
 endmenu

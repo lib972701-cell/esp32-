@@ -16,6 +16,7 @@
 #include "location_service.h"
 #include "location_query.h"
 #include "location_mail.h"
+#include "fall_mail.h"
 #include "dtu_uart.h"
 #include "dtu_time.h"
 #include "boot_config.h"
@@ -27,7 +28,7 @@
 #include "freertos/semphr.h"
 static const char *TAG="mail_service";
 static SemaphoreHandle_t state_lock; /* 保护凭据和共享状态，不跨耗时网络操作持锁。 */
-static QueueHandle_t jobs;           /* 容量为 1；入队时复制 mail_job_t，非指针引用。 */
+static QueueHandle_t jobs;           /* 容量为 16；入队复制任务，唯一 worker 独占 UART。 */
 static mail_credentials_t credentials;
 static bool wiring_ok,busy,configured,clock_set;
 static mail_result_t last_result=MAIL_FAILED;
@@ -39,7 +40,7 @@ static int64_t location_completed_us;
 /* probe：仅探测；location：独立定位；attach_location：定位后组正文发信。
  * autonomous：上电初始化及校时；clock_only：只校时；show_location：本地显示坐标。
  * 各标志由内部构造函数组合，控制台不直接提交任意标志组合。 */
-typedef struct { bool probe; bool location; bool show_location; bool attach_location; bool autonomous; bool clock_only; location_source_t source; mail_message_t message; } mail_job_t;
+typedef struct { bool probe; bool location; bool show_location; bool attach_location; bool autonomous; bool clock_only; bool fall; uint32_t event_id; uint64_t event_us; location_source_t source; mail_message_t message; } mail_job_t;
 
 /*
  * 清除旧校时标志，在 90 秒总预算内读取 DTU 时间并设置系统 UTC 时钟。
@@ -79,33 +80,81 @@ static bool sync_dtu_clock(void)
  * 每条退出路径均释放 busy；任务和临时凭据使用后清零。定位失败可形成说明正文，
  * 校时失败则停止自动邮件；邮件提交后结果未知也不自动重发。
  */
+/* 只由 DTU worker 调用；有界重试，UNKNOWN 禁止重发。 */
+static mail_result_t send_fall(const mail_job_t *job)
+{
+    mail_result_t result = MAIL_FAILED;
+    for (unsigned attempt = 1; attempt <= 3; ++attempt) {
+        bool ready = dtu_uart_init() == ESP_OK;
+        xSemaphoreTake(state_lock, portMAX_DELAY);
+        wiring_ok = ready;
+        bool valid_clock = clock_set;
+        bool valid_config = configured;
+        mail_credentials_t c = credentials;
+        xSemaphoreGive(state_lock);
+        if (!valid_config) {
+            mail_secure_zero(&c, sizeof(c));
+            ESP_LOGE(TAG, "FALL_MAIL_CONFIG_MISSING event=%lu", (unsigned long)job->event_id);
+            break;
+        }
+        if (ready && !valid_clock) ready = sync_dtu_clock();
+        mail_message_t message = {0};
+        strcpy(message.subject, "【紧急求助】疑似摔倒");
+        char base[401];
+        ready = ready && fall_mail_body(base, sizeof(base), job->event_id, job->event_us);
+        if (ready) {
+            location_result_t position = location_query(LOCATION_LBS);
+            ready = location_mail_body(message.body, sizeof(message.body), base,
+                                       &position, (int64_t)time(NULL));
+            mail_secure_zero(&position, sizeof(position));
+        }
+        result = ready ? mail_link_run(&c, &message, false) : MAIL_FAILED;
+        mail_secure_zero(&c, sizeof(c));
+        mail_secure_zero(base, sizeof(base));
+        mail_secure_zero(&message, sizeof(message));
+        ESP_LOGW(TAG, "FALL_MAIL_RESULT event=%lu attempt=%u result=%s",
+                 (unsigned long)job->event_id, attempt, result_names[result]);
+        if (!fall_mail_retry(result, attempt)) break;
+        vTaskDelay(pdMS_TO_TICKS(attempt == 1 ? 5000 : 15000));
+    }
+    return result;
+}
+
 static void worker(void *unused)
 {
     (void)unused;
     for (;;) {
         mail_job_t job;
         xQueueReceive(jobs,&job,portMAX_DELAY);
+        if (job.fall) {
+            mail_result_t r = send_fall(&job);
+            mail_secure_zero(&job, sizeof(job));
+            xSemaphoreTake(state_lock, portMAX_DELAY);
+            last_result = r; mail_result_ready = true;
+            busy = uxQueueMessagesWaiting(jobs) != 0;
+            xSemaphoreGive(state_lock);
+            continue;
+        }
         if(job.autonomous || job.clock_only) {
             bool ok=true;
             if(job.autonomous) {
-                ESP_LOGI(TAG,"BOOT_MAIL_START: one send per boot");
-                ok=configured && dtu_uart_init()==ESP_OK;
+                ESP_LOGI(TAG,"BOOT_DTU_INIT: no test email");
+                ok=dtu_uart_init()==ESP_OK;
                 xSemaphoreTake(state_lock,portMAX_DELAY);wiring_ok=ok;xSemaphoreGive(state_lock);
                 if(ok)vTaskDelay(pdMS_TO_TICKS(20000));
             }
             ok=ok && sync_dtu_clock();
-            if(!ok || job.clock_only) {
+            if(!ok || job.clock_only || job.autonomous) {
                 xSemaphoreTake(state_lock,portMAX_DELAY);
-                if(job.autonomous){last_result=MAIL_FAILED;mail_result_ready=true;}
-                busy=false;xSemaphoreGive(state_lock);
-                if(job.autonomous)ESP_LOGE(TAG,"MAIL_RESULT=FAILED");
+                busy=uxQueueMessagesWaiting(jobs)!=0;xSemaphoreGive(state_lock);
+                if(job.autonomous)ESP_LOGI(TAG,"BOOT_DTU_READY=%d",ok);
                 mail_secure_zero(&job,sizeof(job));continue;
             }
         }
         if (job.location) {
             location_result_t result=location_query(job.source);
             xSemaphoreTake(state_lock,portMAX_DELAY);
-            last_location=result;location_completed_us=esp_timer_get_time();busy=false;
+            last_location=result;location_completed_us=esp_timer_get_time();busy=uxQueueMessagesWaiting(jobs)!=0;
             xSemaphoreGive(state_lock);
             printf("LOCATION_RESULT source=%s status=%s elapsed_ms=%lu error=%d\n",
                 result.source==LOCATION_LBS ? "LBS" : "GNSS",location_status_name(result.status),
@@ -133,7 +182,7 @@ static void worker(void *unused)
         mail_secure_zero(&c,sizeof(c));
         mail_secure_zero(&job,sizeof(job));
         xSemaphoreTake(state_lock,portMAX_DELAY);
-        last_result=r;mail_result_ready=true;busy=false;
+        last_result=r;mail_result_ready=true;busy=uxQueueMessagesWaiting(jobs)!=0;
         xSemaphoreGive(state_lock);
         ESP_LOGI(TAG,"MAIL_RESULT=%s",result_names[r]);
     }
@@ -271,27 +320,21 @@ esp_err_t location_get_last(location_result_t *out, uint32_t *query_age_ms)
 }
 
 /*
- * 一次性创建锁、容量为 1 的队列和 worker（16 KiB 栈，优先级 5）。
- * 启用自动配置时先装载凭据并入队 LBS 定位邮件，再启动 worker；失败时回收资源。
- */
-/*
- * 一次性创建锁、容量为 1 的队列和 worker（16 KiB 栈，优先级 5）。
- * 启用自动配置时先装载凭据并入队 LBS 定位邮件，再启动 worker；失败时回收资源。
+ * 创建锁、容量为 16 的队列和 worker（16 KiB 栈，优先级 5）。
+ * 装载私有配置，仅入队 DTU 初始化与校时，上电不发送邮件。
  */
 esp_err_t app_service_start(void) {
     if (state_lock) return ESP_ERR_INVALID_STATE;
-    state_lock=xSemaphoreCreateMutex();jobs=xQueueCreate(1,sizeof(mail_job_t));
+    state_lock=xSemaphoreCreateMutex();jobs=xQueueCreate(16,sizeof(mail_job_t));
     if (!state_lock || !jobs) {
         goto allocation_failed;
     }
-    if(boot_mail_enabled()) {
+    {
         mail_credentials_t local={0};
         if(boot_mail_credentials(&local) && app_service_config_begin()==ESP_OK)
             (void)app_service_config_finish(&local);
         mail_secure_zero(&local,sizeof(local));
-        mail_job_t job={.autonomous=true,.attach_location=true,.source=LOCATION_LBS};
-        strcpy(job.message.subject,"ESP32 4G autonomous test");
-        strcpy(job.message.body,"ESP32独立上电测试邮件，并非真实求助。无需电脑提供时间或发送指令。");
+        mail_job_t job={.autonomous=true};
         busy=true;
         if(xQueueSend(jobs,&job,0)!=pdTRUE){mail_secure_zero(&job,sizeof(job));goto allocation_failed;}
         mail_secure_zero(&job,sizeof(job));
@@ -304,6 +347,22 @@ allocation_failed:
     jobs=NULL;state_lock=NULL;busy=false;setup_reserved=false;
     configured=false;clock_set=false;wiring_ok=false;mail_result_ready=false;
     mail_secure_zero(&credentials,sizeof(credentials));return ESP_ERR_NO_MEM;
+}
+
+esp_err_t app_service_fall_request(uint32_t event_id, uint64_t event_us)
+{
+    if (!state_lock || !jobs || !event_id) return ESP_ERR_INVALID_STATE;
+    mail_job_t job = {.fall=true, .event_id=event_id, .event_us=event_us};
+    /* 不等待配置会话的锁；采样回调必须有界。 */
+    if (xSemaphoreTake(state_lock, 0) != pdTRUE) return ESP_ERR_TIMEOUT;
+    if (setup_reserved) {xSemaphoreGive(state_lock);return ESP_ERR_INVALID_STATE;}
+    esp_err_t err = xQueueSend(jobs, &job, 0) == pdTRUE ? ESP_OK : ESP_ERR_NO_MEM;
+    if (err == ESP_OK) {
+        busy=true; mail_result_ready=false;
+        location_completed_us=0; memset(&last_location,0,sizeof(last_location));
+    }
+    xSemaphoreGive(state_lock);
+    return err;
 }
 /*
  * 在状态锁内生成一致的状态快照；out 必须指向可写结构，服务须已启动。

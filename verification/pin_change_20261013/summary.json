@@ -1,0 +1,11 @@
+{
+  "tx_gpio": 17,
+  "rx_gpio": 18,
+  "tx_header": "P1-7",
+  "rx_header": "P1-8",
+  "build_passed": true,
+  "app_bytes": 534288,
+  "sha256": "2b502e1f0ab2256bb21856aefcb1021b8bc39f8d4ae3936a08e29317c5c0ef68",
+  "flashed": false,
+  "new_pins_hardware_verified": false
+}

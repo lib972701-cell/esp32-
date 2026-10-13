@@ -468,10 +468,63 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# Fall detection (ESP32-S3 + MPU-6050)
+#
+
+#
+# IMU wiring
+#
+
+#
+# I2C0 on the ATK-DNESP32S3 is IO41 (SDA) / IO42 (SCL) and is shared with
+#
+
+#
+# AP3216C, ES8388, 24C02 and the XL9555 expander - confirm the module wiring
+#
+
+#
+# against the schematic before connecting anything. Do not guess pins.
+#
+CONFIG_FALL_IMU_I2C_PORT=0
+CONFIG_FALL_IMU_SDA_GPIO=4
+CONFIG_FALL_IMU_SCL_GPIO=5
+CONFIG_FALL_IMU_I2C_HZ=400000
+CONFIG_FALL_IMU_ADDR_8BIT=0xD0
+CONFIG_FALL_CALIB_MS=2000
+CONFIG_FALL_CALIB_TRIES=5
+# end of IMU wiring
+
+#
+# MPU-6050 sampling
+#
+CONFIG_FALL_IMU_ODR_HZ=125
+CONFIG_FALL_IMU_PERIOD_MS=8
+# end of MPU-6050 sampling
+
+#
+# Fall decision thresholds (starting points - calibrate by replay)
+#
+CONFIG_FALL_ACC_IMPACT_MG=2500
+CONFIG_FALL_GYRO_IMPACT_MDPS=120000
+CONFIG_FALL_TILT_CHANGE_MDEG=30000
+CONFIG_FALL_TILT_TIME_MAX_MS=0
+CONFIG_FALL_QUIET_BAND_MG=300
+CONFIG_FALL_QUIET_GYRO_MDPS=60000
+CONFIG_FALL_QUIET_MIN_MS=400
+CONFIG_FALL_SETTLE_ENERGY_UG2=50000
+# CONFIG_FALL_REQUIRE_QUIET_PHASE is not set
+CONFIG_FALL_VERIFY_WINDOW_MS=3000
+CONFIG_FALL_MAX_IMPACTS=3
+CONFIG_FALL_REFRACTORY_MS=5000
+# end of Fall decision thresholds (starting points - calibrate by replay)
+# end of Fall detection (ESP32-S3 + MPU-6050)
+
+#
 # Serial 4G mail prototype
 #
-CONFIG_MAIL_DTU_TX_GPIO=4
-CONFIG_MAIL_DTU_RX_GPIO=5
+CONFIG_MAIL_DTU_TX_GPIO=17
+CONFIG_MAIL_DTU_RX_GPIO=18
 # end of Serial 4G mail prototype
 
 #

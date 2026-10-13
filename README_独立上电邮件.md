@@ -4,7 +4,7 @@
 
 用户已确认每次上电发送一封定位测试邮件。运行时不需要电脑Python、串口指令或电脑提供时间。
 
-启动顺序：App Service加载本地编译配置→唯一worker启用UART1 GPIO4/5→等待20秒DTU启动→最多90秒查询DTU网络时间→转换成UTC设置ESP32时钟→查询一次LBS→组织正文→重启DTU建立干净TCP连接→验证QQ SMTP TLS→登录并提交一封邮件。
+启动顺序：App Service加载本地编译配置→唯一worker启用UART1 GPIO17/18→等待20秒DTU启动→最多90秒查询DTU网络时间→转换成UTC设置ESP32时钟→查询一次LBS→组织正文→重启DTU建立干净TCP连接→验证QQ SMTP TLS→登录并提交一封邮件。
 
 无有效位置时仍发送明确说明；时间无效、配置无效、TLS校验失败时不发送。邮件提交后结果未知也不自动重试。下次设备重启会开始新的单封测试，可能再次收到一封；测试版不是事件去重或持久化投递系统。
 
@@ -30,6 +30,6 @@ powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Reconfigure
 
 ## 硬件
 
-ESP32与DTU共地；GPIO4 TX接DTU RX，GPIO5 RX接DTU TX；3.3V TTL，无屏/摄像头。两边按各自手册要求供电。脱离电脑时ESP32需要独立电源，不能拔掉唯一USB电源后期待继续运行；不要把独立电源正极随意互连。
+ESP32与DTU共地；GPIO17 TX接DTU RX，GPIO18 RX接DTU TX；3.3V TTL，无屏/摄像头。两边按各自手册要求供电。脱离电脑时ESP32需要独立电源，不能拔掉唯一USB电源后期待继续运行；不要把独立电源正极随意互连。
 
 COM8用于烧录、COM9 UART0可只读观察日志。电脑只读观察并不参与发信，但完全拔掉电脑USB后的冷启动实收仍需另行验证。精确定位及长期可靠性不由一次邮件实收推定。

@@ -1,0 +1,38 @@
+{
+  "chip": "ESP32-S3 rev0.2",
+  "flash_port": "COM8",
+  "console_port": "COM9",
+  "flash_verified": true,
+  "firmware_sha256": "194e39907afce8e4397babc3d24a60329eacebce46b091ac929c4b6f9ad4fbc8",
+  "imu_identified": true,
+  "imu_calibration_passed": true,
+  "dtu_time_sync_passed": true,
+  "tls_verified": true,
+  "fall_events_queued": [
+    "1",
+    "2",
+    "3"
+  ],
+  "mail_results": [
+    {
+      "event": 1,
+      "attempt": 1,
+      "result": "DATA_ACCEPTED"
+    },
+    {
+      "event": 2,
+      "attempt": 1,
+      "result": "DATA_ACCEPTED"
+    },
+    {
+      "event": 3,
+      "attempt": 1,
+      "result": "DATA_ACCEPTED"
+    }
+  ],
+  "recipient_confirmation": "pending",
+  "imu_transient_read_failure_observed": true,
+  "physical_accuracy_validation": false,
+  "panic_observed": false,
+  "imu_read_failures": 2
+}
