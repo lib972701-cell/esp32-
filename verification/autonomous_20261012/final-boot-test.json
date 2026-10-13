@@ -1,0 +1,17 @@
+{
+  "test": "final_autonomous_boot",
+  "computer_serial_bytes_written": 0,
+  "safe_lines": [
+    "I (21024) mail_service: DTU_TIME_OK epoch=1791796726 offset_minutes=480",
+    "I (21128) mail_service: LOCATION_FOR_MAIL source=LBS status=VALID elapsed_ms=103",
+    "I (41385) mail_link: DTU_TCP_READY",
+    "I (41388) mail_link: TLS_HANDSHAKE",
+    "I (42802) mail_link: TLS_VERIFIED version=TLSv1.2",
+    "I (45886) mail_service: MAIL_RESULT=DATA_ACCEPTED",
+    "I (897) mail_service: BOOT_MAIL_START: one send per boot"
+  ],
+  "mail_result": "DATA_ACCEPTED",
+  "clock_difference_at_observation_seconds": -1,
+  "raw_coordinates_saved": false,
+  "usb_disconnected_cold_boot": "user_confirmed_received_after_both_pc_usb_disconnected_and_power_cycle"
+}

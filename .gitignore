@@ -1,0 +1,8 @@
+build/
+tests/*.exe
+tests/*.pdb
+__pycache__/
+sdkconfig.old
+history/
+*.secrets.*
+private/

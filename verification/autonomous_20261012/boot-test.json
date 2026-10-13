@@ -1,0 +1,16 @@
+{
+  "test": "autonomous_after_flash_reset",
+  "computer_serial_bytes_written": 0,
+  "safe_lines": [
+    "I (897) mail_service: BOOT_MAIL_START: one send per boot",
+    "I (21018) mail_service: DTU_TIME_OK epoch=1791796354 offset_minutes=480",
+    "I (21125) mail_service: LOCATION_FOR_MAIL source=LBS status=VALID elapsed_ms=105",
+    "I (21126) mail_link: DTU_RESTART: new TCP connection, wait 20 seconds",
+    "I (41272) mail_link: DTU_CONFIG_OK",
+    "I (41275) mail_link: TLS_HANDSHAKE",
+    "I (101293) mail_service: MAIL_RESULT=FAILED"
+  ],
+  "mail_result": "FAILED",
+  "clock_difference_seconds": -82,
+  "raw_coordinates_saved": false
+}

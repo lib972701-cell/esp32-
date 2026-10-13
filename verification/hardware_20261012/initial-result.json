@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-12",
+  "flash_port": "COM8",
+  "console_port": "COM9",
+  "chip": "ESP32-S3 revision v0.2",
+  "flash_mb": 16,
+  "psram_mb": 8,
+  "flash_write_and_hash_verification_passed": true,
+  "firmware_bytes": 530848,
+  "firmware_sha256": "f365c8682444d1822457a5d741c2695d41b50abe4615efbd3017136839bf2e2a",
+  "ground_and_tx_rx_user_confirmed": true,
+  "uart1_pins": {"tx": 4, "rx": 5, "baudrate": 115200},
+  "uart1_enabled": true,
+  "lbs_response_status": "VALID",
+  "lbs_query_elapsed_ms": 109,
+  "location_accuracy_verified": false,
+  "raw_coordinates_saved": false,
+  "esp32_tls_verified": true,
+  "esp32_tls_version": "TLSv1.2",
+  "smtp_probe_result": "PROBE_OK",
+  "actual_mail_test": "pending_local_input"
+}

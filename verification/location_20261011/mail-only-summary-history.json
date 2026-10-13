@@ -1,0 +1,20 @@
+{
+  "target": "esp32s3",
+  "framework_reported": "ESP-IDF v5.1.2-dirty",
+  "dependencies": "IDF built-in UART/console/mbedTLS/bootloader_support only; no ADF/SR plugins",
+  "certificate_expiry_enabled": true,
+  "serial_pins_proposed": {
+    "tx": 4,
+    "rx": 5,
+    "baud": 115200
+  },
+  "user_hardware_status": "not_wired_no_lcd",
+  "flash_performed": false,
+  "hardware_tls_verified": false,
+  "esp32_mail_received": false,
+  "build_result": "passed",
+  "protocol_tests": "passed actual C implementation",
+  "helper_tests": 4,
+  "app_bytes": 525584,
+  "app_sha256": "4b1f49363a82f3c17a9676924950d13a8276a485c5c53dbcfdcff46ec67d066c"
+}

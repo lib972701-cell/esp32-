@@ -1,0 +1,7 @@
+{
+  "mail_status": [
+    "MAIL_STATUS wiring=1 time=1 configured=1 busy=0 result=DATA_ACCEPTED heap=8673232"
+  ],
+  "user_confirmed_received": true,
+  "credentials_cleared": true
+}

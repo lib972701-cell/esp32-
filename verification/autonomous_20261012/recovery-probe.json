@@ -1,0 +1,12 @@
+{
+  "safe_lines": [
+    "mail>  I (41280) mail_link: DTU_CONFIG_OK",
+    "I (41284) mail_link: TLS_HANDSHAKE",
+    "I (42589) mail_link: TLS_VERIFIED version=TLSv1.2",
+    "I (45764) mail_service: MAIL_RESULT=DATA_ACCEPTED"
+  ],
+  "mail_result": "DATA_ACCEPTED",
+  "mail_sent": true,
+  "test": "new_boot_send_observed_during_probe_attempt",
+  "note": "DATA_ACCEPTED is a real send, not a probe. A new boot cycle was observed; do not count as a pure probe."
+}

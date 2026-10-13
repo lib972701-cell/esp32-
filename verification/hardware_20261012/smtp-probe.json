@@ -1,0 +1,11 @@
+{
+  "safe_lines": [
+    "\u001b[0;32mI (97152) mail_link: DTU_RESTART: new TCP connection, wait 20 seconds\u001b[0m",
+    "MAIL_REQUEST=ESP_OK",
+    "mail>  \u001b[0;32mI (117280) mail_link: DTU_CONFIG_OK\u001b[0m",
+    "\u001b[0;32mI (117284) mail_link: TLS_HANDSHAKE\u001b[0m",
+    "\u001b[0;32mI (118670) mail_link: TLS_VERIFIED version=TLSv1.2\u001b[0m",
+    "\u001b[0;32mI (118992) mail_link: PROBE_OK (no AUTH, no mail)\u001b[0m",
+    "\u001b[0;32mI (119315) mail_service: MAIL_RESULT=PROBE_OK\u001b[0m"
+  ]
+}

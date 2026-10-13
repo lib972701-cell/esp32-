@@ -1,0 +1,29 @@
+{
+  "target": "esp32s3",
+  "framework_reported": "ESP-IDF v5.1.2-dirty",
+  "dependencies": "IDF built-in UART/console/mbedTLS/bootloader_support only; no ADF/SR plugins",
+  "certificate_expiry_enabled": true,
+  "serial_pins_proposed": {
+    "tx": 4,
+    "rx": 5,
+    "baud": 115200
+  },
+  "user_hardware_status": "only DTU COM9 detected; ESP32 wiring/port unverified",
+  "flash_performed": false,
+  "hardware_tls_verified": false,
+  "esp32_mail_received": false,
+  "build_result": "passed",
+  "protocol_tests": "passed actual C implementation",
+  "helper_tests": 4,
+  "app_bytes": 530448,
+  "app_sha256": "b9314bde16cefb3490ecaff53eb76fd2ddcdd714a4be4fb0b8a30e9a9f055f3b",
+  "location_protocol_tests": "passed; synthetic data only",
+  "location_feature": "LBS/GNSS one-shot query in shared UART worker",
+  "esp32_location_hardware_verified": false,
+  "actual_dtu_lbs_coordinate_valid": false,
+  "pc_dtu_csq": 31,
+  "pc_dtu_smtp_connected": true,
+  "location_mail_feature": "query once then send; no-fix still sends a note",
+  "location_mail_tests": "passed synthetic data",
+  "esp32_location_mail_hardware_verified": false
+}

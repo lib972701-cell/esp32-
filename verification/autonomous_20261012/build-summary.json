@@ -1,0 +1,11 @@
+{
+  "app_bytes": 533568,
+  "sha256": "7452054f48c9ccc067cb52a053b0f1945bca87e329c13cbce998572c6a7010d0",
+  "boot_enabled": true,
+  "time_offset_minutes": 480,
+  "private_config_in_firmware_verified": true,
+  "credentials_logged": false,
+  "tests": "four C suites and six Python tests passed",
+  "build": "passed",
+  "flash": "passed"
+}

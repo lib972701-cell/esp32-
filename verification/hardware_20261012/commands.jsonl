@@ -1,0 +1,3 @@
+{"command": "mail_time", "safe_lines": ["MAIL_TIME_OK"]}
+{"command": "mail_wiring_ok", "safe_lines": ["MAIL_WIRING=ESP_OK TX=4 RX=5 115200_8N1"]}
+{"command": "location_get", "safe_lines": ["LOCATION_REQUEST=ESP_OK"]}

@@ -1,0 +1,10 @@
+PASS: address injection, fragmented replies, malformed/multiline replies, DTU config, SMTP accepted/auth rejection/DATA unknown/DATA rejection
+test_fragmented_prompt (test_helper.HelperTests.test_fragmented_prompt) ... ok
+test_open_does_not_toggle_reset (test_helper.HelperTests.test_open_does_not_toggle_reset) ... ok
+test_reject_console_injection (test_helper.HelperTests.test_reject_console_injection) ... ok
+test_timeout_does_not_disclose_device_bytes (test_helper.HelperTests.test_timeout_does_not_disclose_device_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

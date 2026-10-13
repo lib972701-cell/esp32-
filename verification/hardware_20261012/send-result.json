@@ -1,0 +1,7 @@
+{
+  "transport": "esp32_uart1_4g",
+  "automatic_retry": false,
+  "status": "UNCONFIRMED_CHECK_INBOX",
+  "failure_type": "TimeoutError",
+  "time_utc_epoch": 1791794921
+}
