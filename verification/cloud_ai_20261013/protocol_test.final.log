@@ -1,0 +1,1 @@
+PASS: address injection, fragmented replies, malformed/multiline replies, DTU config, SMTP accepted/auth rejection/DATA unknown/DATA rejection

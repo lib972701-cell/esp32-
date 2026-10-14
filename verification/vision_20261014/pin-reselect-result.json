@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "esp_tx_gpio": 6,
+  "esp_tx_header": "P1-3",
+  "esp_rx_gpio": 16,
+  "esp_rx_header": "P1-6",
+  "imu_int_reserved_gpio": 7,
+  "maix_uart": "/dev/ttyS4",
+  "maix_tx": "A21",
+  "maix_rx": "A22",
+  "uart_enabled": false,
+  "flashed": false,
+  "hardware_tested": false,
+  "host_test_exit": 0,
+  "cloud_build_exit": 0,
+  "cloud_binary_bytes": 1814528
+}

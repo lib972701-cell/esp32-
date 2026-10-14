@@ -1,0 +1,11 @@
+== help-event queue policy (design document section 12)
+== FIFO order and single hand-over
+== retry ladder 5/15/30/60 s and the attempt ceiling
+== a submit timeout is 'unknown', not 'failed'
+== bounded queue refuses and counts instead of dropping silently
+== busy / terminal semantics
+== defensive paths
+
+----------------------------------------
+checks passed: 80, failed: 0
+----------------------------------------

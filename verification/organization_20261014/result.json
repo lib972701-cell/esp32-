@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-14",
+  "cloud_build_passed": true,
+  "legacy_build_passed": true,
+  "host_regression_passed": true,
+  "cloud_firmware_bytes": 1807120,
+  "legacy_firmware_bytes": 547664,
+  "protected_sources_unchanged": 30,
+  "source_files_checked": 88,
+  "local_links_checked": 61,
+  "broken_links": 0,
+  "flashed_after_organization": false,
+  "empty_directory_cleanup": "自动审批拒绝删除命令，空目录保留"
+}

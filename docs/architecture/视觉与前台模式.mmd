@@ -1,0 +1,21 @@
+flowchart TB
+    Boot[上电] --> Fall[MPU6050持续采样与摔倒检测]
+    Fall --> Mail[原求助队列与DTU worker]
+    Mail --> DTU[UART1 GPIO17/18 → 4G定位与TLS邮件]
+    Boot --> Keys[XL9555共享扫描 KEY0/1/2]
+    Boot --> Backend[Wi-Fi及音频后台初始化]
+    Keys --> Arbiter[App统一前台调度 最新意图]
+    Arbiter --> StopCloud[撤销云端代次 停采播 清队列 关闭通道]
+    StopCloud --> CloudStopped{云端停止确认?}
+    CloudStopped -->|是| SelectVision[UART2 TX6/RX16 MODE LIGHT或PERSON]
+    SelectVision --> Maix[MaixCAM2单模型识别]
+    Maix --> Result[匹配seq ACK及epoch/frame RES]
+    Result --> State[结果快照及UART0日志 不播报]
+    Arbiter --> StopVision[UART2 MODE IDLE 释放视觉资源]
+    StopVision --> IdleACK{匹配IDLE ACK?}
+    IdleACK -->|是| Cloud[Wi-Fi云端语音采播]
+    IdleACK -->|否| Wait[保持等待 不能并行启动对话]
+    Backend -.后台常驻不等于采播.-> Cloud
+    Maix -.超时或重启.-> Invalid[撤销旧结果 取消旧意图 重新同步]
+    Invalid --> Arbiter
+    Note[UART未配置：视觉不启动 KEY0仍可用；摔倒任务不参与前台互斥]

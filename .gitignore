@@ -1,8 +1,43 @@
+# ESP-IDF build directories and downloaded dependencies
 build/
+build-*/
+cmake-build-*/
+managed_components/
+local_components/
+
+# CMake / Ninja generated files (including in-source builds)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+build.ninja
+.ninja_deps
+.ninja_log
+
+# Compiled objects, libraries, firmware and host test executables
+*.o
+*.obj
+*.a
+*.lib
+*.elf
+*.bin
+*.hex
+*.map
+*.d
 tests/*.exe
 tests/*.pdb
+tests/*.ilk
+
+# Host test and Python caches
+verification/zig-cache/
+verification/zig-global-cache/
 __pycache__/
-sdkconfig.old
+*.pyc
+
+# ESP-IDF configuration backups (keep active configs and defaults tracked)
+sdkconfig*.old
+
+# Local history and private credentials
 history/
 *.secrets.*
 private/

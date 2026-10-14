@@ -1,0 +1,9 @@
+menu "KEY0 cloud voice conversation"
+    config CLOUD_AI_ENABLE
+        bool "Enable cloud voice conversation"
+        default n
+    config OTA_URL
+        string "Xiaozhi service discovery URL"
+        default "https://api.tenclass.net/xiaozhi/ota/"
+        depends on CLOUD_AI_ENABLE
+endmenu

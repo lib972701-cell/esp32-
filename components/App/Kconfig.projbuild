@@ -1,1 +1,21 @@
-rsource "Fall/Kconfig.projbuild"
+menu "Fall startup calibration"
+        config FALL_CALIB_MS
+            int "Static calibration window at boot (ms, 0 = skip)"
+            default 2000
+            help
+                The device must be perfectly still for this long after reset: the
+                gyroscope zero-rate bias and the accelerometer magnitude scale are
+                estimated from the window, then applied to every sample. Without it the
+                gyro offset integrates into yaw (-2 deg/s was measured on this bench unit)
+                and a |a| error biases the quiet/energy features. A window that moved is
+                rejected rather than applied silently.
+
+        config FALL_CALIB_TRIES
+            int "Calibration attempts before giving up"
+            default 5
+            help
+                Each attempt is FALL_CALIB_MS long. A window that moved is rejected and
+                another is tried, so the operator does not have to reset at exactly the
+                right moment. With 5 x 2000 ms the boot waits at most 10 s.
+
+endmenu

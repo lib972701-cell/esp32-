@@ -1,0 +1,6 @@
+{"command": "", "tag": "before-flash"}
+{"command": "mail_status", "tag": "before-flash"}
+{"command": "activity_status", "tag": "before-flash"}
+{"command": "", "tag": "enabled-baseline"}
+{"command": "activity_status", "tag": "enabled-baseline"}
+{"command": "mail_status", "tag": "enabled-baseline"}

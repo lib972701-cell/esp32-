@@ -1,0 +1,166 @@
+I (98) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=[0;32mI (23162) WifiStation: Wait for next scan[0m
+[0;32mI (25583) WifiStation: Wait for next scan[0m
+[0;32mI (28003) WifiStation: Wait for next scan[0m
+[0;32mI (30423) WifiStation: Wait for next scan[0m
+[0;32mI (32843) WifiStation: Wait for next scan[0m
+[0;32mI (35263) WifiStation: Wait for next scan[0m
+[0;32mI (37684) WifiStation: Wait for next scan[0m
+[0;32mI (40104) WifiStation: Wait for next scan[0m
+[0;32mI (42524) WifiStation: Wait for next scan[0m
+[0;32mI (44944) WifiStation: Wait for next scan[0m
+[0;32mI (47365) WifiStation: Wait for next scan[0m
+[0;32mI (49785) WifiStation: Wait for next scan[0m
+[0;32mI (52205) WifiStation: Wait for next scan[0m
+[0;32mI (54625) WifiStation: Wait for next scan[0m
+[0;32mI (57045) WifiStation: Found AP: 1, BSSID: 7e:7b:ef:36:7b:59, RSSI: -40, Channel: 1, Authmode: 3[0m
+W (57047) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+I (57378) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (57379) wifi:state: init -> auth (0xb0)
+I (57406) wifi:state: auth -> assoc (0x0)
+I (57459) wifi:state: assoc -> run (0x10)
+I (57523) wifi:connected with 1, aid = 1, channel 1, BW20, bssid = 7e:7b:ef:36:7b:59
+I (57525) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (57525) wifi:pm start, type: 1
+
+I (57536) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (57538) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (57549) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (57561) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (58606) WifiStation: Got IP: 10.233.167.222[0m
+[0;32mI (58607) esp_netif_handlers: sta ip: 10.233.167.222, mask: 255.255.255.0, gw: 10.233.167.11[0m
+[0;32mI (58608) cloud_wifi: Wi-Fi connected[0m
+[0;32mI (58619) Ota: Current version: 2.0.3-instrument[0m
+I (58880) wifi:<ba-add>idx:0 (ifx:0, 7e:7b:ef:36:7b:59), tid:0, ssn:4, winSize:64
+[0;32mI (59252) esp-x509-crt-bundle: Certificate validated[0m
+[0;31mE (60099) esp-tls-mbedtls: read error :-0x004C[0m
+[0;31mE (60100) EspSsl: SSL receive failed: -76[0m
+[0;32mI (60105) Ota: Current is the latest version[0m
+[0;32mI (60108) MQTT: Connecting to endpoint api.tenclass.net[0m
+[0;31mE (60552) esp-tls-mbedtls: mbedtls_ssl_setup returned -0x7F00[0m
+[0;31mE (60553) esp-tls: create_ssl_handle failed[0m
+[0;31mE (60554) esp-tls: Failed to open new connection[0m
+[0;31mE (60565) transport_base: Failed to open a new connection[0m
+[0;31mE (60567) mqtt_client: Error transport connect[0m
+[0;32mI (60579) esp_mqtt: MQTT error occurred: ESP_ERR_MBEDTLS_SSL_SETUP_FAILED[0m
+[0;31mE (60580) MQTT: Failed to connect to endpoint[0m
+[0;33mW (60591) cloud_ai: 无法连接语音服务器[0m
+[0;32mI (60592) cloud_ai: KEY0 ready: short=start, hold 2s=exit[0m
+I (361) esp_image: segment 3: paddr=001aa278 vaddr=3fc9d060 size[0;31mE (18714) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (18715) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (18726) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;32mI (19367) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (19972) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (19974) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (19985) esp-tls: Failed to open new connection[0m
+[0;31mE (19986) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (19988) HttpClient: TCP connection failed[0m
+[0;31mE (19999) Ota: Failed to open HTTP connection[0m
+[0;33mW (20000) cloud_ai: Service discovery pending, retry=2; fall_sampling continues[0m
+[0;31mE (29201) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (29202) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (29214) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;32mI (30011) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (30309) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (30311) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (30322) esp-tls: Failed to open new connection[0m
+[0;31mE (30323) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (30325) HttpClient: TCP connection failed[0m
+[0;31mE (30336) Ota: Failed to open HTTP connection[0m
+[0;33mW (30337) cloud_ai: Service discovery pending, retry=3; fall_sampling continues[0m
+[0;32mI (40349) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (40895) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (40896) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (40907) esp-tls: Failed to open new connection[0m
+[0;31mE (40908) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (40910) HttpClient: TCP connection failed[0m
+[0;31mE (40921) Ota: Failed to open HTTP connection[0m
+[0;33mW (40922) cloud_ai: Service discovery pending, retry=4; fall_sampling continues[0m
+[0;32mI (50934) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (51232) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (51233) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (51244) esp-tls: Failed to open new connection[0m
+[0;31mE (51245) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (51247) HttpClient: TCP connection failed[0m
+[0;31mE (51258) Ota: Failed to open HTTP connection[0m
+[0;33mW (51259) cloud_ai: Service discovery pending, retry=5; fall_sampling continues[0m
+[0;32mI (61270) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (61503) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (61505) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (61516) esp-tls: Failed to open new connection[0m
+[0;31mE (61517) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (61519) HttpClient: TCP connection failed[0m
+[0;31mE (61530) Ota: Failed to open HTTP connection[0m
+[0;33mW (61531) cloud_ai: Service discovery pending, retry=6; fall_sampling continues[0m
+[0;32mI (71542) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (72106) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (72107) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (72118) esp-tls: Failed to open new connection[0m
+[0;31mE (72119) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (72121) HttpClient: TCP connection failed[0m
+[0;31mE (72132) Ota: Failed to open HTTP connection[0m
+[0;33mW (72133) cloud_ai: Service discovery pending, retry=7; fall_sampling continues[0m
+[0;31mE (76497) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (76498) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (76510) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;32mI (82145) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (82643) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (82644) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (82645) esp-tls: Failed to open new connection[0m
+[0;31mE (82656) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (82659) HttpClient: TCP connection failed[0m
+[0;31mE (82670) Ota: Failed to open HTTP connection[0m
+[0;33mW (82671) cloud_ai: Service discovery pending, retry=8; fall_sampling continues[0m
+[0;32mI (92682) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (93006) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (93007) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (93019) esp-tls: Failed to open new connection[0m
+[0;31mE (93019) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (93031) HttpClient: TCP connection failed[0m
+[0;31mE (93032) Ota: Failed to open HTTP connection[0m
+[0;33mW (93033) cloud_ai: Service discovery pending, retry=9; fall_sampling continues[0m
+[0;31mE (97561) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (97562) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (97574) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;32mI (103045) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (103330) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (103331) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (103343) esp-tls: Failed to open new connection[0m
+[0;31mE (103343) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (103356) HttpClient: TCP connection failed[0m
+[0;31mE (103357) Ota: Failed to open HTTP connection[0m
+[0;33mW (103357) cloud_ai: Service discovery pending, retry=10; fall_sampling continues[0m
+[0;31mE (110559) mail_service: DTU_TIME_FAILED: no email without valid clock[0m
+[0;32mI (110560) mail_service: BOOT_DTU_READY=0[0m
+[0;32mI (113369) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (113402) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (113403) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (113414) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;31mE (113770) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (113771) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (113782) esp-tls: Failed to open new connection[0m
+[0;31mE (113783) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (113795) HttpClient: TCP connection failed[0m
+[0;31mE (113796) Ota: Failed to open HTTP connection[0m
+[0;33mW (113797) cloud_ai: Service discovery pending, retry=11; fall_sampling continues[0m
+[0;32mI (123808) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (123849) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (123850) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (123862) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;31mE (124211) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (124212) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (124224) esp-tls: Failed to open new connection[0m
+[0;31mE (124225) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (124237) HttpClient: TCP connection failed[0m
+[0;31mE (124238) Ota: Failed to open HTTP connection[0m
+[0;33mW (124239) cloud_ai: Service discovery pending, retry=12; fall_sampling continues[0m
+[0;31mE (129217) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (129218) i2c.master: s_i2c_synchronous_transaction(918): I2C transaction failed[0m
+[0;31mE (129230) i2c.master: i2c_master_transmit_receive(1214): I2C transaction failed[0m
+[0;32mI (134250) Ota: Current version: 2.0.3-instrument[0m
+[0;31mE (134657) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700[0m
+[0;32mI (134659) esp-tls-mbedtls: Failed to verify peer certificate![0m
+[0;31mE (134670) esp-tls: Failed to open new connection[0m
+[0;31mE (134671) EspSsl: Failed to connect to api.tenclass.net:443[0m
+[0;31mE (134683) HttpClient: TCP connection failed[0m
+[0;31mE (134684) Ota: Failed to open HTTP connection[0m
+[0;33mW (134685) cloud_ai: Service discovery pending, retry=13; fall_sampling continues[0m

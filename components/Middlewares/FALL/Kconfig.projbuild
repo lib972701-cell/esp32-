@@ -1,0 +1,105 @@
+menu "Fall detection algorithm"
+    menu "Fall decision thresholds (starting points - calibrate by replay)"
+
+        config FALL_ACC_IMPACT_MG
+            int "Impact candidate: acceleration magnitude (milli-g)"
+            default 2500
+            help
+                Kept at 2.5 g. Measured over 47 hand-held trials: simulated falls peaked at
+                1.06-1.71 g and normal handling at 1.09-1.74 g, so this criterion never fires
+                for hand-held motion - it only does its job when the device really hits
+                something (an earlier swing that struck a surface reached 2.78 g). Lowering
+                it to 1.7 g changed the calibration result by at most one trial.
+
+        config FALL_GYRO_IMPACT_MDPS
+            int "Impact candidate: angular rate magnitude (milli-dps)"
+            default 120000
+            help
+                Calibrated by replaying the recorded acceptance run through the real
+                detector (tools/calibrate_from_recording.py). Measured trade-off with the
+                gravity-tilt threshold at 30 deg:
+                  120 dps -> 14/20 falls caught, 3/27 normal false triggers
+                  150 dps -> 10/20, 3/27
+                  200 dps ->  5/20, 2/27
+                  300 dps ->  2/20, 1/27
+                A missed fall is the safety-relevant error and a false trigger can be
+                cancelled within the 15 s window, so the recall-favouring 120 dps is the
+                default. Raise it if false triggers matter more in your deployment.
+
+        config FALL_TILT_CHANGE_MDEG
+            int "Required gravity-tilt change after the impact (milli-degrees)"
+            default 30000
+            help
+                The angle between the gravity direction at the impact candidate and the
+                gravity direction now. Yaw is deliberately excluded: without a magnetometer
+                it is unobservable and carried by gyro integration alone, so turning on the
+                spot would otherwise satisfy a posture-change test - that was a real false
+                trigger on the bench (a turn showed 45.6 deg of yaw and 7.6 deg of tilt).
+                Calibrated trade-off with gyro at 120 dps:
+                  25 deg -> 14/20 falls, 5/27 false
+                  30 deg -> 14/20 falls, 3/27 false
+                  35 deg -> 10/20 falls, 2/27 false
+                  45 deg ->  5/20 falls, 1/27 false
+
+        config FALL_TILT_TIME_MAX_MS
+            int "Posture change must be reached within (ms, 0 = no limit)"
+            range 0 5000
+            default 0
+            help
+                Time from the impact candidate to the moment the gravity tilt
+                crosses FALL_TILT_CHANGE_MDEG. 0 keeps the untimed rule.
+
+                DEFAULT 0 IS A MEASURED DECISION. Replaying the recorded 47-trial
+                run shows the posture-change time does not separate the classes: the
+                14 confirmed hand-held simulated falls reached their tilt in
+                960-2976 ms (median 1632), and the 3 false-triggering normal actions
+                took 1344-2064 ms (median 1968) - the normal actions sit inside the
+                falls' range and their tilt is even larger. A limit tight enough to
+                remove those false triggers (below 1344 ms) also removes five of the
+                fourteen falls. It measures how fast an operator moved a hand, not
+                the physics of a fall.
+
+                A real fall completes its posture change in a few hundred
+                milliseconds, so this is the right shape for a body-worn trial; but
+                it must be calibrated with real fall data. Enabling it on the
+                strength of the hand-held recording would trade recall for nothing.
+                The grid is in evidence/calibration-report.txt; the per-trial times
+                are in evidence/posture-timing.txt.
+
+        config FALL_QUIET_BAND_MG
+            int "Low-motion band around 1 g (milli-g)"
+            default 300
+
+        config FALL_QUIET_GYRO_MDPS
+            int "Low-motion angular rate limit (milli-dps)"
+            default 60000
+
+        config FALL_QUIET_MIN_MS
+            int "Low-motion stage duration (ms)"
+            default 400
+
+        config FALL_SETTLE_ENERGY_UG2
+            int "Motion-settled energy threshold (micro-g^2)"
+            default 50000
+
+        config FALL_REQUIRE_QUIET_PHASE
+            bool "Require the full low-motion stage before confirming"
+            default n
+            help
+                Off by default: the low-motion stage is a supporting feature, not a
+                hard requirement, so that soft falls are not excluded.
+
+        config FALL_VERIFY_WINDOW_MS
+            int "Impact to confirmation deadline (ms)"
+            default 3000
+
+        config FALL_MAX_IMPACTS
+            int "Distinct acceleration impacts allowed while verifying"
+            default 3
+
+        config FALL_REFRACTORY_MS
+            int "Refractory after a cancel or a completed event (ms)"
+            default 5000
+    endmenu
+
+endmenu

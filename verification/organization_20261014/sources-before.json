@@ -1,0 +1,354 @@
+[
+  {
+    "Path": "components/App/Boot/app_calib.c",
+    "Hash": "7453AD696589B616CCE4A895389F56AF4BBD07F307EF7B740E61CE63F84ED918"
+  },
+  {
+    "Path": "components/App/Boot/app_calib.h",
+    "Hash": "5C6A14234D0ABAB402E988EADB33A1DEF82D8846804AFD897970CD49EDBA9C27"
+  },
+  {
+    "Path": "components/App/Boot/app_config.c",
+    "Hash": "1D4300F48D0C1E93F21FF71B40702DC1661EFD2A85A5A4222DEE7467BB55CE98"
+  },
+  {
+    "Path": "components/App/Boot/app_config.h",
+    "Hash": "133F856608479E42C58E2E98F63D43EE2EEFF32B109A37098851D0473A1BBAAF"
+  },
+  {
+    "Path": "components/App/Boot/boot_config.c",
+    "Hash": "8104EAE9E546526BDFDBFF57A22F6E233B9D7975D00383A17EEAD104FC25F560"
+  },
+  {
+    "Path": "components/App/Boot/boot_config.h",
+    "Hash": "0631444074D5DB5F24E086FAB6A7D0B4DD804665300031CCF65E052E00FFE0E9"
+  },
+  {
+    "Path": "components/App/Boot/mail_config.example.h",
+    "Hash": "674E638310883DBE3895C1AC01631E49B2AE275835AD7221A28A9AC310D7F4AE"
+  },
+  {
+    "Path": "components/App/Boot/Defaults/mail_config.h",
+    "Hash": "A59D4961D82902FF4208C9FF16759D6EBCF05BFB0D4C03124A1B62C6C665C070"
+  },
+  {
+    "Path": "components/App/Console/app_console.c",
+    "Hash": "385DEDDB3F9FF00318F718A30F6B7443ABCA7EF86B8100C797BD207F78C92748"
+  },
+  {
+    "Path": "components/App/Console/app_console.h",
+    "Hash": "1A51397A0905A099DA2B1419D1D42F0435AFA2C80E91D00A52E8F5CC080DDE1B"
+  },
+  {
+    "Path": "components/App/Message/fall_mail.c",
+    "Hash": "A3610754F71D56EAE6293CE11DA10858A0BF88A7C7108D57E97A4A2AC6886DBB"
+  },
+  {
+    "Path": "components/App/Message/fall_mail.h",
+    "Hash": "4D68E64F6AE6F9E2438CC5F3F6E3BB1A6DA6EE564147C776FF7350E01130195A"
+  },
+  {
+    "Path": "components/App/Message/location_mail.c",
+    "Hash": "9FAB5F19A5EF29554EEE152C198C823BF34A3D7E14DBCC4B918A3703E2468956"
+  },
+  {
+    "Path": "components/App/Message/location_mail.h",
+    "Hash": "655FE6E5FF089BBFEE5012894E630246B4301D76807A6B8498693189DFE02BE8"
+  },
+  {
+    "Path": "components/App/Service/app_service.c",
+    "Hash": "F277665C914FE697BE2238C55CA52A4BB5EAE3D1420A53E242BA5121380A97E6"
+  },
+  {
+    "Path": "components/App/Service/app_service.h",
+    "Hash": "155647AFA158130FC42A27D56F1EF0176AEAC6734FA23467D165D099765ABD44"
+  },
+  {
+    "Path": "components/App/Service/app_state.h",
+    "Hash": "022B485E1EC549030FA9BC24F359B8725FBF5B6BEC76D782E87FDF9E3542A984"
+  },
+  {
+    "Path": "components/App/Service/fall_app.c",
+    "Hash": "EC052F935635CF1C08819E7FAAFC1492471894736B855BA1389A5847FEE3A043"
+  },
+  {
+    "Path": "components/App/Service/fall_app.h",
+    "Hash": "7DE6A662053AB5484B3494F5461F3DB6292981F76E0BB214B3AF1481FDB29F4A"
+  },
+  {
+    "Path": "components/App/Service/location_service.h",
+    "Hash": "1750D20B2462B10F69AC4E0B3A3636FF7CCCDA737018A09794ACEA4089FDBA6E"
+  },
+  {
+    "Path": "components/App/Service/mail_service.h",
+    "Hash": "79449EB2BC7F2AB4164AD0918C1FF3E2956E55697036A3C11DCC5EEC5A8AE05C"
+  },
+  {
+    "Path": "components/BSP/DTU/dtu_frame.c",
+    "Hash": "E10768E05E3A18649F9B39FC863EED8A3D6144C6CECD809F7D89030197E8EA96"
+  },
+  {
+    "Path": "components/BSP/DTU/dtu_frame.h",
+    "Hash": "829052922078E479B091861F284472F1297527B060BBF9FB5115ED19ACE695F9"
+  },
+  {
+    "Path": "components/BSP/DTU/dtu_uart.c",
+    "Hash": "E8E30FC318087067CAE1249095CB741FD7F38DF33AE93098F48E6548B98FA426"
+  },
+  {
+    "Path": "components/BSP/DTU/dtu_uart.h",
+    "Hash": "E5189066A1628ADD0866968C3618E3A11F09E043294FD7DCE9F0A2B26D1D4C69"
+  },
+  {
+    "Path": "components/BSP/I2C/imu_bus_v2.c",
+    "Hash": "B92B9692C70EACEC6E20A5F24C8810A19B3799226423D224261AF5A544A0217D"
+  },
+  {
+    "Path": "components/BSP/I2C/imu_port_v2.c",
+    "Hash": "D0E21003DF01C7E8CF59B2B15F125306BDBE85EB559CC3C531E4724A9E824B77"
+  },
+  {
+    "Path": "components/BSP/MPU6050/imu_bus.c",
+    "Hash": "0AA1854AA25D1EBD21FFD77473FFFEB3894BF45802441E4B04C8B158BB261285"
+  },
+  {
+    "Path": "components/BSP/MPU6050/imu_device.c",
+    "Hash": "206AD7A068EB606CE183AFB7B20D47A648A1D6738D6F58D1614C7B9C7C4CE8F5"
+  },
+  {
+    "Path": "components/BSP/MPU6050/imu_mpu6050.c",
+    "Hash": "10C939CA03FFD64A2A194EF2DA4BF1DD03ECEB103C189336ABB5FFFB71ECDE3F"
+  },
+  {
+    "Path": "components/BSP/MPU6050/imu_mpu6050.h",
+    "Hash": "FE4817DB5B77CC78C6EE781E76F97B2AD8A080FB607CCAF0858E5DA5F3D88839"
+  },
+  {
+    "Path": "components/BSP/MPU6050/imu_port.c",
+    "Hash": "FB1011EB8974941BFB552F6D910512EBF3BF72EE386E2D6E6ADF85EFBADE75BC"
+  },
+  {
+    "Path": "components/BSP/MPU6050/include/imu_bus.h",
+    "Hash": "9E29C03544D9CCEFEAEE8C182CEAB8D75D40F27237CF086F61841E5076BDD27B"
+  },
+  {
+    "Path": "components/BSP/MPU6050/include/imu_device.h",
+    "Hash": "CB188CECCC9B9D0E95D1E08351D95146027ACEEEB07946403EBFE057FCF2699A"
+  },
+  {
+    "Path": "components/BSP/MPU6050/include/imu_port.h",
+    "Hash": "273CB6744077977FC66B0FF7E76ECFCF25D3DBD1622E77E2C393400CC90A8EA2"
+  },
+  {
+    "Path": "components/BSP/MPU6050/include/imu_types.h",
+    "Hash": "F0D981E61D4317E620152904A0D6863E713DAA50C8D6471FC24279B61AB57D2D"
+  },
+  {
+    "Path": "components/CloudAI/control/cloud_ai.cc",
+    "Hash": "FE6843EC283FD8EA275D80074DD948DAA8642F194D28B326FEAFE87BB2666C35"
+  },
+  {
+    "Path": "components/CloudAI/control/cloud_ai.h",
+    "Hash": "DFFB2C6D7F86BA34EE06DEBEAC2A82D69905FD8A28B1655E67545C9B19322C51"
+  },
+  {
+    "Path": "components/CloudAI/control/conversation_gate.h",
+    "Hash": "DD945056AC37A287E7D1D95D70B75F954A46F8527CC1A546B682C9C2948808FA"
+  },
+  {
+    "Path": "components/CloudAI/control/key0_driver.cc",
+    "Hash": "DC1F3653E9DB4C9F40A27E95553A4B32BC1B703AB9BED1CCFD31FE0B420662DE"
+  },
+  {
+    "Path": "components/CloudAI/control/key0_driver.h",
+    "Hash": "FB3E06D8A06E134664EC676C6E6A3E1305039601D8D1E0021D5EC3F4AFB0A532"
+  },
+  {
+    "Path": "components/CloudAI/control/key0_filter.h",
+    "Hash": "E8368BC046CC552B91B11DEDDE7D10109685D87A34F3EDA694A560B047137E93"
+  },
+  {
+    "Path": "components/CloudAI/voice/application.cc",
+    "Hash": "98036BB3F7482A7EB86074C7B61DD75301C5399E6290F79BFF3A745D968D76CC"
+  },
+  {
+    "Path": "components/CloudAI/voice/application.h",
+    "Hash": "FDB0454190477A8E37201FF1A026E3D8F4F8F46528FB6D005326A64A0196CA35"
+  },
+  {
+    "Path": "components/CloudAI/voice/board.cc",
+    "Hash": "094C80A143717F29ECC99CEB0F92C8AFC345DB7CB6A237371E1C9DBFCDB82638"
+  },
+  {
+    "Path": "components/CloudAI/voice/board.h",
+    "Hash": "2853DD900ACAF3D16B47A106F1A0506D197E0D9EB143C6DA90B2D9520550B69C"
+  },
+  {
+    "Path": "components/CloudAI/voice/ota.cc",
+    "Hash": "CD88CB041B6949A187EA3B0401FF48ECC7AA342926AD4F7481E5967DD02E0B81"
+  },
+  {
+    "Path": "components/CloudAI/voice/ota.h",
+    "Hash": "295EDEDBCC0C8CDA9B6BAECB9EB9B9FAA53F2C1E8DBBFEDC60EB65E7E96E1BBF"
+  },
+  {
+    "Path": "components/CloudAI/voice/settings.cc",
+    "Hash": "BF0CA7DF6906C698A1D4AB5F1238BFB37347EA54A25B170EAB9C9B45804032BD"
+  },
+  {
+    "Path": "components/CloudAI/voice/settings.h",
+    "Hash": "54D36509087886DB3D8D7B5C19A1692811D77304AF4AB249B3A3A4A9C74872E7"
+  },
+  {
+    "Path": "components/CloudAI/voice/system_info.cc",
+    "Hash": "0E95B331635A31C716638979CDBD34D8A247DEE0DC296BAA212414B10DD8BA40"
+  },
+  {
+    "Path": "components/CloudAI/voice/system_info.h",
+    "Hash": "A6280291A1008884449A555B1E68A3CCA3E3152EF54B84577DA478B7904A7745"
+  },
+  {
+    "Path": "components/CloudAI/voice/assets/lang_config.h",
+    "Hash": "AA7E255C87400DE89C508B03CD378183A7D039435954023187C0F842B9B33FF3"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/audio_codec.cc",
+    "Hash": "B610F801E82A9FABEB748B2C64F801C0211AF82752E131585CEF49AD5620F7AA"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/audio_codec.h",
+    "Hash": "393C8004BEFA07B8C54E28C4337D29B9B19DE114BE9390B76CB9108442C53DAD"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/audio_processor.h",
+    "Hash": "D3391429E5360E737C6FCF0901808E325FA1EED75C471D3E59D2BD7173AD3C38"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/audio_service.cc",
+    "Hash": "364299609D90C23AEB8384C6D4432E7481C6B261F2A58A4D4B356CF6AA84359D"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/audio_service.h",
+    "Hash": "77F995AF4285416415B6D5339E6C82DD9B999B908F3CFE93E16FDA9ED5D1EC18"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/codecs/es8388_audio_codec.cc",
+    "Hash": "5DE8E20590D7A56994E92154D002C8791C81135C1F8DF214037E53845CF21FCE"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/codecs/es8388_audio_codec.h",
+    "Hash": "31F5F6C2E4A84A9D6E7F2C83E77646EF2C08BBBCFFE2BFAECE09E95AF81D31BF"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/processors/no_audio_processor.cc",
+    "Hash": "3CC1A06E3D4884016C17E1CA27E4052FC62E76FA96A2D3564B8148E34BB1ECD9"
+  },
+  {
+    "Path": "components/CloudAI/voice/audio/processors/no_audio_processor.h",
+    "Hash": "4C9125B51928B10A95BDAD0033B309F9A7D7256193DA626E3507BC3D2A3CD68B"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/mqtt_protocol.cc",
+    "Hash": "D6F11E319645B7ED936FE3BCD45C1B1483D61B5FE4BCC1EB416AB2092636D70F"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/mqtt_protocol.h",
+    "Hash": "70EAE3CFB6A3B8BFA66F0E7BBC0D3569DDA341F275A733123C07C357DA483E9C"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/protocol.cc",
+    "Hash": "E8E4A43A95182E1B6F63D1D52FA57E350D8A803223E2223E5589D35BA8B88BC8"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/protocol.h",
+    "Hash": "605B5B5880D2212C6E2754F5197929B4AAF36A79E7FEAF8DB01B6A197B0D5000"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/websocket_protocol.cc",
+    "Hash": "2F561257DCFDF18D3466F1B91B430CD08ADDBBA6AF4559BE9EA04174207F7DFA"
+  },
+  {
+    "Path": "components/CloudAI/voice/protocols/websocket_protocol.h",
+    "Hash": "AAFDB6247699FA4F79227F616C0B0F60953BFB8A9411663B25CE190163B929C5"
+  },
+  {
+    "Path": "components/Middlewares/FALL/attitude.c",
+    "Hash": "444B5A14E397887625CD504BE4A8AFA18730628D5B266A385FBF3251B50E2384"
+  },
+  {
+    "Path": "components/Middlewares/FALL/fall_detector.c",
+    "Hash": "B270AA7508E40D314F28B0C7D11E935629D0EAD97C64948D958F4672D4107A85"
+  },
+  {
+    "Path": "components/Middlewares/FALL/help_policy.c",
+    "Hash": "E3615DB87E26A2EBDD0B8AD1C30E1D7CD3DCE293BA16CB3F54B4B130B643A8A0"
+  },
+  {
+    "Path": "components/Middlewares/FALL/imu_calib.c",
+    "Hash": "BA712E65FDF4058C48178FE2FED6EC6BCBC0062D92BFA785C274F2F6D116B99E"
+  },
+  {
+    "Path": "components/Middlewares/FALL/include/attitude.h",
+    "Hash": "82D8C0A9711089BF6BE155FC6017C79C373324D395C7428D573880C6BF05FB59"
+  },
+  {
+    "Path": "components/Middlewares/FALL/include/fall_detector.h",
+    "Hash": "8FCA6225F40A56FE630F9F76747390FDAA5BA82448E7DFFB42A38E6D99A2EC76"
+  },
+  {
+    "Path": "components/Middlewares/FALL/include/help_policy.h",
+    "Hash": "A7A988D507E95B7A32BE24927A07C206DDBC60B61D0851BECE38535C20F3E912"
+  },
+  {
+    "Path": "components/Middlewares/FALL/include/imu_calib.h",
+    "Hash": "1D113694C742625AD655A7F23B2292528A3B3A019935B638F8D84A01A0923D62"
+  },
+  {
+    "Path": "components/Middlewares/LOCATION/location_protocol.c",
+    "Hash": "9A7C13AE934E7243F4C56724989CA4BDE9E57C9F6093264D116D3818D3F671B5"
+  },
+  {
+    "Path": "components/Middlewares/LOCATION/location_protocol.h",
+    "Hash": "D929627D3CA59DA750CBF7C21A4F8313D930C467CEFFB7E1F325AB6416B0359F"
+  },
+  {
+    "Path": "components/Middlewares/LOCATION/location_query.c",
+    "Hash": "09F3CCE9C63D1BEDB1A66AC7C23F46B7FAA3339672323A76FE8718F7BC2219FB"
+  },
+  {
+    "Path": "components/Middlewares/LOCATION/location_query.h",
+    "Hash": "C47D864B4E09E4051B1CD46797181A7867FA4A7DEC25BF127DE9BEE85E9C6DBC"
+  },
+  {
+    "Path": "components/Middlewares/MAIL/mail_link.c",
+    "Hash": "25A8B04BED10FD394D36D919D11C8B0C9EE5350A0A058DD21FC452F5D423CB30"
+  },
+  {
+    "Path": "components/Middlewares/MAIL/mail_link.h",
+    "Hash": "DF8A321681431877FB889C5F84C63C54577DF25C783E3C9A79189734062988BB"
+  },
+  {
+    "Path": "components/Middlewares/MAIL/mail_protocol.c",
+    "Hash": "6179EE7D74A6CC453FCB1FF756E05118AD18A3EEEDFC5A43E01F3C8A1ED43573"
+  },
+  {
+    "Path": "components/Middlewares/MAIL/mail_protocol.h",
+    "Hash": "7D826BCC7654C86CC1739557C612C415D4796242408292F15CBAF62DAFF9871B"
+  },
+  {
+    "Path": "components/Middlewares/TIME/dtu_time_parse.c",
+    "Hash": "3F3F803456F2BBD9417BF8BA2D6C1E09F9099E4E449661995F6AC64208B3A638"
+  },
+  {
+    "Path": "components/Middlewares/TIME/dtu_time_query.c",
+    "Hash": "54F0226D399B2779C66EA680200595216A24A5F6F020EE731116B7D789137A74"
+  },
+  {
+    "Path": "components/Middlewares/TIME/dtu_time.h",
+    "Hash": "9F8A6EB87D04D7DC9FFF2827D315AF34CDD392B657A448F59F2BE85CE075F65C"
+  },
+  {
+    "Path": "main/main.c",
+    "Hash": "01F1298559E7A3E6E932E5BBB788A1489DF1E3B9900119DCD980CC7816961FE1"
+  }
+]

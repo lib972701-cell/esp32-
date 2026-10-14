@@ -1,0 +1,11 @@
+flowchart LR
+    Power[上电] --> Fall[原摔倒检测：core1持续采样]
+    Power --> Mail[原DTU定位邮件任务]
+    Power --> Voice[云端语音初始化：core0]
+    Key[KEY0 / XL9555] --> Filter[消抖：短按开启 / 长按退出]
+    Filter --> Session[会话意图与代次控制]
+    Session --> Voice
+    Voice <--> Audio[ES8388录音播放 / Opus]
+    Voice <--> WiFi[Wi-Fi / 小智云端]
+    Fall -->|原跌倒事件| Mail
+    Mail <--> DTU[M100MG-B2 / 原定位邮件链路]

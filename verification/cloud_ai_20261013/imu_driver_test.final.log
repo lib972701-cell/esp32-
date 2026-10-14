@@ -1,0 +1,1 @@
+PASS: every MPU6050 init write failure stays unavailable; recovery succeeds.

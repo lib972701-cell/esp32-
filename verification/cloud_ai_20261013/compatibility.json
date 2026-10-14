@@ -1,0 +1,12 @@
+{
+  "idf": "5.4.0",
+  "components": {
+    "78__esp-ml307": "3.3.7",
+    "78__esp-opus": "1.0.5",
+    "78__esp-opus-encoder": "2.4.1",
+    "78__esp-wifi-connect": "2.5.2",
+    "espressif__esp_codec_dev": "1.4.0"
+  },
+  "policy": "fixed local audio/network components; component manager disabled",
+  "i2c": "new API only; IMU I2C1 GPIO4/5, audio I2C0 GPIO41/42"
+}

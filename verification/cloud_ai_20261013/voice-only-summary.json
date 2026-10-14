@@ -1,0 +1,15 @@
+{
+  "build_passed": true,
+  "host_compile_and_tests_passed": true,
+  "python_tests": 8,
+  "fall_checks": 72,
+  "help_policy_checks": 80,
+  "hardware_tested": false,
+  "firmware_bytes": 1790720,
+  "firmware_sha256": "b14aee36e305a92bb59f2735d05a01e748c66119633518c36fab5b522b4058d5",
+  "forbidden_components": [],
+  "protected_files": 30,
+  "changed_protected_files": [],
+  "partition_file": "partitions-16MiB.csv",
+  "idf": "5.4.0"
+}

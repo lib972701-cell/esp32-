@@ -1,0 +1,52 @@
+menu "MPU6050 hardware"
+    menu "IMU wiring"
+        comment "I2C0 on the ATK-DNESP32S3 is IO41 (SDA) / IO42 (SCL) and is shared with"
+        comment "AP3216C, ES8388, 24C02 and the XL9555 expander - confirm the module wiring"
+        comment "against the schematic before connecting anything. Do not guess pins."
+
+        config FALL_IMU_I2C_PORT
+            int "I2C peripheral port"
+            range 0 1
+            default 0
+
+        config FALL_IMU_SDA_GPIO
+            int "I2C SDA GPIO"
+            default 4
+            help
+                Measured on this bench unit: the GY-521 is wired to IO4/IO5, not to the
+                board's onboard I2C0 (IO41/IO42, which already carries the codec, light
+                sensor, accelerometer, IO expander and EEPROM). This application never
+                searches other GPIO pairs. Correct the configured wiring when absent.
+
+        config FALL_IMU_SCL_GPIO
+            int "I2C SCL GPIO"
+            default 5
+
+        config FALL_IMU_I2C_HZ
+            int "I2C clock frequency (Hz)"
+            default 400000
+
+        config FALL_IMU_ADDR_8BIT
+            hex "IMU I2C address in 8-bit form"
+            default 0xD0
+            help
+                MPU-6050: 0xD0 when ADO is low (7-bit 0x68), 0xD2 when ADO is high (0x69).
+
+    endmenu
+
+    menu "MPU-6050 sampling"
+        config FALL_IMU_ODR_HZ
+            int "Accelerometer / gyroscope output data rate (Hz)"
+            range 1 1000
+            default 125
+            help
+                With DLPF enabled the reference clock is 1 kHz. The driver picks
+                the nearest integer divider and reports the actual sample rate.
+
+        config FALL_IMU_PERIOD_MS
+            int "imu_task period (ms)"
+            range 1 1000
+            default 8
+    endmenu
+
+endmenu

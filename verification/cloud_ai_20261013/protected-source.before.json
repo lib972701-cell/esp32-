@@ -1,0 +1,122 @@
+[
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\attitude.c",
+    "Hash": "444B5A14E397887625CD504BE4A8AFA18730628D5B266A385FBF3251B50E2384"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\fall_detector.c",
+    "Hash": "B270AA7508E40D314F28B0C7D11E935629D0EAD97C64948D958F4672D4107A85"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\help_policy.c",
+    "Hash": "E3615DB87E26A2EBDD0B8AD1C30E1D7CD3DCE293BA16CB3F54B4B130B643A8A0"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\imu_calib.c",
+    "Hash": "BA712E65FDF4058C48178FE2FED6EC6BCBC0062D92BFA785C274F2F6D116B99E"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\Kconfig.projbuild",
+    "Hash": "D4CC4EE429D43D4B895AA554523871A0E4D73A75DE811A4915515F95C3D3DD6B"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\include\\attitude.h",
+    "Hash": "82D8C0A9711089BF6BE155FC6017C79C373324D395C7428D573880C6BF05FB59"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\include\\fall_detector.h",
+    "Hash": "8FCA6225F40A56FE630F9F76747390FDAA5BA82448E7DFFB42A38E6D99A2EC76"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\include\\help_policy.h",
+    "Hash": "A7A988D507E95B7A32BE24927A07C206DDBC60B61D0851BECE38535C20F3E912"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\Middlewares\\FALL\\include\\imu_calib.h",
+    "Hash": "1D113694C742625AD655A7F23B2292528A3B3A019935B638F8D84A01A0923D62"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\app_service.c",
+    "Hash": "F277665C914FE697BE2238C55CA52A4BB5EAE3D1420A53E242BA5121380A97E6"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\app_service.h",
+    "Hash": "155647AFA158130FC42A27D56F1EF0176AEAC6734FA23467D165D099765ABD44"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\app_state.h",
+    "Hash": "022B485E1EC549030FA9BC24F359B8725FBF5B6BEC76D782E87FDF9E3542A984"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\fall_app.c",
+    "Hash": "EC052F935635CF1C08819E7FAAFC1492471894736B855BA1389A5847FEE3A043"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\fall_app.h",
+    "Hash": "7DE6A662053AB5484B3494F5461F3DB6292981F76E0BB214B3AF1481FDB29F4A"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\location_service.h",
+    "Hash": "1750D20B2462B10F69AC4E0B3A3636FF7CCCDA737018A09794ACEA4089FDBA6E"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Service\\mail_service.h",
+    "Hash": "79449EB2BC7F2AB4164AD0918C1FF3E2956E55697036A3C11DCC5EEC5A8AE05C"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Message\\fall_mail.c",
+    "Hash": "A3610754F71D56EAE6293CE11DA10858A0BF88A7C7108D57E97A4A2AC6886DBB"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Message\\fall_mail.h",
+    "Hash": "4D68E64F6AE6F9E2438CC5F3F6E3BB1A6DA6EE564147C776FF7350E01130195A"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Message\\location_mail.c",
+    "Hash": "9FAB5F19A5EF29554EEE152C198C823BF34A3D7E14DBCC4B918A3703E2468956"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\App\\Message\\location_mail.h",
+    "Hash": "655FE6E5FF089BBFEE5012894E630246B4301D76807A6B8498693189DFE02BE8"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\imu_bus.c",
+    "Hash": "0AA1854AA25D1EBD21FFD77473FFFEB3894BF45802441E4B04C8B158BB261285"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\imu_device.c",
+    "Hash": "206AD7A068EB606CE183AFB7B20D47A648A1D6738D6F58D1614C7B9C7C4CE8F5"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\imu_mpu6050.c",
+    "Hash": "10C939CA03FFD64A2A194EF2DA4BF1DD03ECEB103C189336ABB5FFFB71ECDE3F"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\imu_mpu6050.h",
+    "Hash": "FE4817DB5B77CC78C6EE781E76F97B2AD8A080FB607CCAF0858E5DA5F3D88839"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\imu_port.c",
+    "Hash": "FB1011EB8974941BFB552F6D910512EBF3BF72EE386E2D6E6ADF85EFBADE75BC"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\Kconfig.projbuild",
+    "Hash": "CB55A86BA7335B1B6E86BE614F7CD59CB372FBD7EF4E51CA5C1C25E04AE4F2D0"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\include\\imu_bus.h",
+    "Hash": "9E29C03544D9CCEFEAEE8C182CEAB8D75D40F27237CF086F61841E5076BDD27B"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\include\\imu_device.h",
+    "Hash": "CB188CECCC9B9D0E95D1E08351D95146027ACEEEB07946403EBFE057FCF2699A"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\include\\imu_port.h",
+    "Hash": "273CB6744077977FC66B0FF7E76ECFCF25D3DBD1622E77E2C393400CC90A8EA2"
+  },
+  {
+    "Path": "C:\\Users\\workspace\\Desktop\\sample_project\\components\\BSP\\MPU6050\\include\\imu_types.h",
+    "Hash": "F0D981E61D4317E620152904A0D6863E713DAA50C8D6471FC24279B61AB57D2D"
+  }
+]

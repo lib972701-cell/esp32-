@@ -1,0 +1,47 @@
+fall-core host tests
+
+== attitude math
+
+== normal: flat and still, 5 s
+
+== normal: slow tilt to 90 deg and hold (tilt alone must not fire)
+
+== normal: pick up and put down (moderate, sub-threshold motion)
+
+== normal: vigorous shaking, 3 s
+    shaking stats: candidates=1 rejected=18 repeated_impact=1 timeout=0
+
+== slow posture change (45 deg over 3 s) with no time limit: confirms
+
+== the same slow posture change with a 1500 ms limit: rejected
+
+== impact and no posture change at all: no_attitude_change, not slow_posture
+
+== fast simulated fall with a 1500 ms limit: still confirms
+    posture change reached 416 ms after the impact (limit 1500 ms)
+
+== simulated fall: impact -> posture change -> settle
+    [confirming features] tilt=89.7 deg  euler delta=89.1 deg  energy=0.0000 g2  |a|=1.000 g  quiet=1
+    features: |a|=1.000 g |w|=3.7 dps att_change=89.1 deg energy=0.0000 g2
+
+== simulated fall + cancel inside the window
+
+== simulated fall left alone: window expires -> help pending
+
+== impact without posture change must be rejected
+
+== a turn on the spot (yaw only) must not confirm a fall
+
+== IMU reported down: no automatic judgement
+
+== IMU healthy again: detection resumes
+
+== static IMU calibration
+
+== replay determinism
+
+== immediate help and rearm do not repeat a settled event
+
+----------------------------------------
+checks passed: 72, failed: 0
+----------------------------------------

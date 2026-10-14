@@ -1,0 +1,11 @@
+{"command":"","tag":"retry-ground"}
+{"command":"activity_status","tag":"ground-handshake"}
+{"command":"activity_select light","tag":"light-start"}
+{"command":"activity_status","tag":"light-status"}
+{"command":"activity_select person","tag":"person-start"}
+{"command":"activity_status","tag":"person-status"}
+{"command":"activity_select idle","tag":"prepare-keys"}
+{"command":"activity_status","tag":"key0-diagnose"}
+{"command":"activity_select idle","tag":"screen-update-idle"}
+{"command":"activity_select light","tag":"wake-screen"}
+{"command":"activity_select idle","tag":"sleep-screen"}

@@ -1,0 +1,452 @@
+{
+  "source_count": 88,
+  "sources": [
+    {
+      "original": "components/App/Boot/app_calib.c",
+      "current": "components/App/Boot/app_calib.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/app_calib.h",
+      "current": "components/App/Boot/app_calib.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/app_config.c",
+      "current": "components/App/Boot/app_config.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/app_config.h",
+      "current": "components/App/Boot/app_config.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/boot_config.c",
+      "current": "components/App/Boot/boot_config.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/boot_config.h",
+      "current": "components/App/Boot/boot_config.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/mail_config.example.h",
+      "current": "components/App/Boot/mail_config.example.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Boot/Defaults/mail_config.h",
+      "current": "components/App/Boot/Defaults/mail_config.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Console/app_console.c",
+      "current": "components/App/Console/app_console.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Console/app_console.h",
+      "current": "components/App/Console/app_console.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Message/fall_mail.c",
+      "current": "components/App/Message/fall_mail.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Message/fall_mail.h",
+      "current": "components/App/Message/fall_mail.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Message/location_mail.c",
+      "current": "components/App/Message/location_mail.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Message/location_mail.h",
+      "current": "components/App/Message/location_mail.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/app_service.c",
+      "current": "components/App/Service/app_service.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/app_service.h",
+      "current": "components/App/Service/app_service.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/app_state.h",
+      "current": "components/App/Service/app_state.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/fall_app.c",
+      "current": "components/App/Service/fall_app.c",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/fall_app.h",
+      "current": "components/App/Service/fall_app.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/location_service.h",
+      "current": "components/App/Service/location_service.h",
+      "changed": false
+    },
+    {
+      "original": "components/App/Service/mail_service.h",
+      "current": "components/App/Service/mail_service.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/DTU/dtu_frame.c",
+      "current": "components/BSP/DTU/dtu_frame.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/DTU/dtu_frame.h",
+      "current": "components/BSP/DTU/dtu_frame.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/DTU/dtu_uart.c",
+      "current": "components/BSP/DTU/dtu_uart.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/DTU/dtu_uart.h",
+      "current": "components/BSP/DTU/dtu_uart.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/I2C/imu_bus_v2.c",
+      "current": "components/BSP/I2C/idf5/imu_bus_v2.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/I2C/imu_port_v2.c",
+      "current": "components/BSP/I2C/idf5/imu_port_v2.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/imu_bus.c",
+      "current": "components/BSP/MPU6050/imu_bus.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/imu_device.c",
+      "current": "components/BSP/MPU6050/imu_device.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/imu_mpu6050.c",
+      "current": "components/BSP/MPU6050/imu_mpu6050.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/imu_mpu6050.h",
+      "current": "components/BSP/MPU6050/imu_mpu6050.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/imu_port.c",
+      "current": "components/BSP/MPU6050/imu_port.c",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/include/imu_bus.h",
+      "current": "components/BSP/MPU6050/include/imu_bus.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/include/imu_device.h",
+      "current": "components/BSP/MPU6050/include/imu_device.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/include/imu_port.h",
+      "current": "components/BSP/MPU6050/include/imu_port.h",
+      "changed": false
+    },
+    {
+      "original": "components/BSP/MPU6050/include/imu_types.h",
+      "current": "components/BSP/MPU6050/include/imu_types.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/cloud_ai.cc",
+      "current": "components/CloudAI/control/cloud_ai.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/cloud_ai.h",
+      "current": "components/CloudAI/control/cloud_ai.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/conversation_gate.h",
+      "current": "components/CloudAI/control/conversation_gate.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/key0_driver.cc",
+      "current": "components/CloudAI/board/key0_driver.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/key0_driver.h",
+      "current": "components/CloudAI/board/key0_driver.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/control/key0_filter.h",
+      "current": "components/CloudAI/control/key0_filter.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/application.cc",
+      "current": "components/CloudAI/control/application.cc",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/application.h",
+      "current": "components/CloudAI/control/application.h",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/board.cc",
+      "current": "components/CloudAI/board/board.cc",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/board.h",
+      "current": "components/CloudAI/board/board.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/ota.cc",
+      "current": "components/CloudAI/network/cloud_bootstrap.cc",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/ota.h",
+      "current": "components/CloudAI/network/cloud_bootstrap.h",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/settings.cc",
+      "current": "components/CloudAI/support/settings.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/settings.h",
+      "current": "components/CloudAI/support/settings.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/system_info.cc",
+      "current": "components/CloudAI/support/system_info.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/system_info.h",
+      "current": "components/CloudAI/support/system_info.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/assets/lang_config.h",
+      "current": "components/CloudAI/support/lang_config.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/audio_codec.cc",
+      "current": "components/CloudAI/audio/audio_codec.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/audio_codec.h",
+      "current": "components/CloudAI/audio/audio_codec.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/audio_processor.h",
+      "current": "components/CloudAI/audio/audio_processor.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/audio_service.cc",
+      "current": "components/CloudAI/audio/audio_service.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/audio_service.h",
+      "current": "components/CloudAI/audio/audio_service.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/codecs/es8388_audio_codec.cc",
+      "current": "components/CloudAI/board/es8388_audio_codec.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/codecs/es8388_audio_codec.h",
+      "current": "components/CloudAI/board/es8388_audio_codec.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/processors/no_audio_processor.cc",
+      "current": "components/CloudAI/audio/processors/no_audio_processor.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/audio/processors/no_audio_processor.h",
+      "current": "components/CloudAI/audio/processors/no_audio_processor.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/mqtt_protocol.cc",
+      "current": "components/CloudAI/network/mqtt_protocol.cc",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/mqtt_protocol.h",
+      "current": "components/CloudAI/network/mqtt_protocol.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/protocol.cc",
+      "current": "components/CloudAI/network/protocol.cc",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/protocol.h",
+      "current": "components/CloudAI/network/protocol.h",
+      "changed": false
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/websocket_protocol.cc",
+      "current": "components/CloudAI/network/websocket_protocol.cc",
+      "changed": true
+    },
+    {
+      "original": "components/CloudAI/voice/protocols/websocket_protocol.h",
+      "current": "components/CloudAI/network/websocket_protocol.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/attitude.c",
+      "current": "components/Middlewares/FALL/attitude.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/fall_detector.c",
+      "current": "components/Middlewares/FALL/fall_detector.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/help_policy.c",
+      "current": "components/Middlewares/FALL/help_policy.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/imu_calib.c",
+      "current": "components/Middlewares/FALL/imu_calib.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/include/attitude.h",
+      "current": "components/Middlewares/FALL/include/attitude.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/include/fall_detector.h",
+      "current": "components/Middlewares/FALL/include/fall_detector.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/include/help_policy.h",
+      "current": "components/Middlewares/FALL/include/help_policy.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/FALL/include/imu_calib.h",
+      "current": "components/Middlewares/FALL/include/imu_calib.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/LOCATION/location_protocol.c",
+      "current": "components/Middlewares/LOCATION/location_protocol.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/LOCATION/location_protocol.h",
+      "current": "components/Middlewares/LOCATION/location_protocol.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/LOCATION/location_query.c",
+      "current": "components/Middlewares/LOCATION/location_query.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/LOCATION/location_query.h",
+      "current": "components/Middlewares/LOCATION/location_query.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/MAIL/mail_link.c",
+      "current": "components/Middlewares/MAIL/mail_link.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/MAIL/mail_link.h",
+      "current": "components/Middlewares/MAIL/mail_link.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/MAIL/mail_protocol.c",
+      "current": "components/Middlewares/MAIL/mail_protocol.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/MAIL/mail_protocol.h",
+      "current": "components/Middlewares/MAIL/mail_protocol.h",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/TIME/dtu_time_parse.c",
+      "current": "components/Middlewares/TIME/dtu_time_parse.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/TIME/dtu_time_query.c",
+      "current": "components/Middlewares/TIME/dtu_time_query.c",
+      "changed": false
+    },
+    {
+      "original": "components/Middlewares/TIME/dtu_time.h",
+      "current": "components/Middlewares/TIME/dtu_time.h",
+      "changed": false
+    },
+    {
+      "original": "main/main.c",
+      "current": "main/main.c",
+      "changed": false
+    }
+  ],
+  "protected_unchanged": 30,
+  "local_links_checked": 61,
+  "broken_links": [],
+  "root_markdown": [
+    "README.md"
+  ],
+  "visual_components_in_both_profiles": []
+}

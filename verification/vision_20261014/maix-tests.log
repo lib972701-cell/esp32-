@@ -1,0 +1,42 @@
+test_boundary_is_uncertain_and_resets_vote (test_direction.DirectionTests.test_boundary_is_uncertain_and_resets_vote) ... ok
+test_directions_confirm_independently (test_direction.DirectionTests.test_directions_confirm_independently) ... ok
+test_filter_invalid_boxes_scores_and_other_classes (test_direction.DirectionTests.test_filter_invalid_boxes_scores_and_other_classes) ... ok
+test_gap_duplicate_and_reset (test_direction.DirectionTests.test_gap_duplicate_and_reset) ... ok
+test_move_needs_new_confirmation_and_loss_clears (test_direction.DirectionTests.test_move_needs_new_confirmation_and_loss_clears) ... ok
+test_multiple_people_and_center (test_direction.DirectionTests.test_multiple_people_and_center) ... ok
+test_alternation_never_confirms (test_light_confirmation.ConfirmationTests.test_alternation_never_confirms) ... ok
+test_duplicate_or_backwards_time_cannot_vote (test_light_confirmation.ConfirmationTests.test_duplicate_or_backwards_time_cannot_vote) ... ok
+test_filter_reason_explains_rejection (test_light_confirmation.ConfirmationTests.test_filter_reason_explains_rejection) ... ok
+test_long_loss_resets_history (test_light_confirmation.ConfirmationTests.test_long_loss_resets_history) ... ok
+test_low_score_small_or_nonfinite_input (test_light_confirmation.ConfirmationTests.test_low_score_small_or_nonfinite_input) ... ok
+test_missing_current_frame_invalidates (test_light_confirmation.ConfirmationTests.test_missing_current_frame_invalidates) ... ok
+test_moderate_scores_can_confirm_with_strong_average (test_light_confirmation.ConfirmationTests.test_moderate_scores_can_confirm_with_strong_average) ... ok
+test_multiple_targets_are_ambiguous (test_light_confirmation.ConfirmationTests.test_multiple_targets_are_ambiguous) ... ok
+test_new_target_does_not_inherit_votes (test_light_confirmation.ConfirmationTests.test_new_target_does_not_inherit_votes) ... ok
+test_opposite_invalidates_green_and_needs_new_votes (test_light_confirmation.ConfirmationTests.test_opposite_invalidates_green_and_needs_new_votes) ... ok
+test_requires_four_new_frames (test_light_confirmation.ConfirmationTests.test_requires_four_new_frames) ... ok
+test_small_four_pixel_target_can_confirm (test_light_confirmation.ConfirmationTests.test_small_four_pixel_target_can_confirm) ... ok
+test_stale_window_cannot_confirm (test_light_confirmation.ConfirmationTests.test_stale_window_cannot_confirm) ... ok
+test_unknown_can_be_one_vote_in_window (test_light_confirmation.ConfirmationTests.test_unknown_can_be_one_vote_in_window) ... ok
+test_unknown_label_is_not_green (test_light_confirmation.ConfirmationTests.test_unknown_label_is_not_green) ... ok
+test_weak_consistent_scores_cannot_confirm (test_light_confirmation.ConfirmationTests.test_weak_consistent_scores_cannot_confirm) ... ok
+test_gap_resets_and_duplicate_does_not_vote (test_presence.PresenceTests.test_gap_resets_and_duplicate_does_not_vote) ... ok
+test_three_frames_then_immediate_loss (test_presence.PresenceTests.test_three_frames_then_immediate_loss) ... ok
+test_launcher_auto_start_argument (test_runtime.RuntimeTests.test_launcher_auto_start_argument) ... ok
+test_uart_mode_and_result_main_loop (test_runtime.RuntimeTests.test_uart_mode_and_result_main_loop) ... ok
+test_zero_byte_write_raises (test_runtime.RuntimeTests.test_zero_byte_write_raises) ... ok
+test_bad_command_does_not_change_mode (test_system.ControllerTests.test_bad_command_does_not_change_mode) ... ok
+test_duplicate_does_not_reload (test_system.ControllerTests.test_duplicate_does_not_reload) ... ok
+test_failure_invalidates_old_mode (test_system.ControllerTests.test_failure_invalidates_old_mode) ... ok
+test_idle_closes_resources (test_system.ControllerTests.test_idle_closes_resources) ... ok
+test_old_retry_does_not_restore_old_mode (test_system.ControllerTests.test_old_retry_does_not_restore_old_mode) ... ok
+test_corruption_is_rejected (test_system.ProtocolTests.test_corruption_is_rejected) ... ok
+test_crc_standard_vector (test_system.ProtocolTests.test_crc_standard_vector) ... ok
+test_fragment_and_multiple_frames (test_system.ProtocolTests.test_fragment_and_multiple_frames) ... ok
+test_oversize_recovers_at_newline (test_system.ProtocolTests.test_oversize_recovers_at_newline) ... ok
+test_partial_timeout_recovers (test_system.ProtocolTests.test_partial_timeout_recovers) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.208s
+
+OK

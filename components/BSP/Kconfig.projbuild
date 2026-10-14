@@ -8,3 +8,22 @@ config MAIL_DTU_RX_GPIO
     range 17 18
     default 18
 endmenu
+
+rsource "MPU6050/Kconfig.projbuild"
+
+menu "External MaixCAM2 vision UART2"
+config VISION_UART_ENABLE
+    bool "Enable vision UART2 after wiring confirmation"
+    default n
+    help
+        UART0 is the log console and UART1 belongs to the DTU.
+        Enable only after confirming both boards' IO levels, pins and common GND.
+config VISION_TX_GPIO
+    int "ESP32 UART2 TX GPIO (DNESP32S3 P1 pin3)"
+    range -1 48
+    default 6
+config VISION_RX_GPIO
+    int "ESP32 UART2 RX GPIO (DNESP32S3 P1 pin6; IO7 reserved for IMU INT)"
+    range -1 48
+    default 16
+endmenu

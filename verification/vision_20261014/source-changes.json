@@ -1,0 +1,15 @@
+{
+  "BaselineCount": 88,
+  "Changed": [
+    "components/CloudAI/board/board.cc",
+    "components/CloudAI/board/key0_driver.cc",
+    "components/CloudAI/control/application.cc",
+    "components/CloudAI/control/application.h",
+    "components/CloudAI/control/cloud_ai.cc",
+    "components/CloudAI/control/cloud_ai.h",
+    "components/CloudAI/control/conversation_gate.h",
+    "main/main.c"
+  ],
+  "Missing": [],
+  "UnchangedCount": 80
+}

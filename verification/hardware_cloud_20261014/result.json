@@ -1,0 +1,19 @@
+{
+  "firmware_bytes": 1807120,
+  "firmware_sha256": "0A28AD401E1804E5CC601B24131BF234CA0C52B11A69F1F3D76C4D49382F84F2",
+  "board": "ESP32-S3 rev0.2 DNESP32S3",
+  "flash_port": "COM8",
+  "console_port": "COM9",
+  "flash_verified": true,
+  "short_start": true,
+  "long_exit": true,
+  "restart_conversation": true,
+  "audio_upload_decode": true,
+  "fall_event_during_conversation": true,
+  "fall_mail_result": "event2 attempt2 DATA_ACCEPTED",
+  "user_feedback": "收到了，没问题",
+  "protected_files": 30,
+  "protected_changed": 0,
+  "disconnect_tested": false,
+  "long_term_tested": false
+}

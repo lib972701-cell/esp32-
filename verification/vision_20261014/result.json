@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-14",
+  "host_suite_exit": 0,
+  "vision_scenario_groups": 9,
+  "maix_python_tests": 37,
+  "cloud_build": {
+    "idf": "5.4",
+    "exit": 0,
+    "bytes": 1814064,
+    "sha256": "8B385746E7B37C651500C2296ADE5C23DA86236A0513BF4F9FF2285EFE6EA19D"
+  },
+  "legacy_build": {
+    "idf": "5.1.2",
+    "exit": 0,
+    "bytes": 553904,
+    "sha256": "8C1FCB7DE33EB97210177E59423E109535595368932278B0A83D78D19D5F287F"
+  },
+  "sources": {
+    "BaselineCount": 88,
+    "Changed": [
+      "components/CloudAI/board/board.cc",
+      "components/CloudAI/board/key0_driver.cc",
+      "components/CloudAI/control/application.cc",
+      "components/CloudAI/control/application.h",
+      "components/CloudAI/control/cloud_ai.cc",
+      "components/CloudAI/control/cloud_ai.h",
+      "components/CloudAI/control/conversation_gate.h",
+      "main/main.c"
+    ],
+    "Missing": [],
+    "UnchangedCount": 80
+  },
+  "vision_uart_enabled": false,
+  "vision_tx_gpio": -1,
+  "vision_rx_gpio": -1,
+  "flashed": false,
+  "maix_device_updated": false,
+  "hardware_tested": false,
+  "review": "Two read-only source reviews: no blocking issue found"
+}
